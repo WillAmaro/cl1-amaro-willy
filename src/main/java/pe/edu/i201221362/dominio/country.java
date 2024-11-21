@@ -19,12 +19,18 @@ public class country {
     private Integer indepYear;
     private Integer population;
     private Float lifeExpectancy;
+    private Float gnp;
+    private Float gnpOld;
+    private String localName;
+    private String GovernmentForm;
+    private String headOfState;
+    private Integer capital;
+    private String code2;
 
     @OneToMany(mappedBy = "country", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<city> cities = new ArrayList<>();
 
-    @OneToMany(mappedBy = "country", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<countryLanguage> languages = new ArrayList<>();
+
 
     public String getCode() {
         return code;
@@ -98,15 +104,85 @@ public class country {
         this.cities = cities;
     }
 
-    public List<countryLanguage> getLanguages() {
-        return languages;
+
+
+    public Float getGnp() {
+        return gnp;
     }
 
-    public void setLanguages(List<countryLanguage> languages) {
-        this.languages = languages;
+    public void setGnp(Float gnp) {
+        this.gnp = gnp;
+    }
+
+    public Float getGnpoId() {
+        return gnpOld;
+    }
+
+    public void setGnpoId(Float gnpoId) {
+        this.gnpOld = gnpoId;
+    }
+
+    public String getLocalName() {
+        return localName;
+    }
+
+    public void setLocalName(String localName) {
+        this.localName = localName;
+    }
+
+    public String getGovernmentForm() {
+        return GovernmentForm;
+    }
+
+    public void setGovernmentForm(String governmentForm) {
+        GovernmentForm = governmentForm;
+    }
+
+    public String getHeadOfState() {
+        return headOfState;
+    }
+
+    public void setHeadOfState(String headOfState) {
+        this.headOfState = headOfState;
+    }
+
+    public Integer getCapital() {
+        return capital;
+    }
+
+    public void setCapital(Integer capital) {
+        this.capital = capital;
+    }
+
+    public String getCode2() {
+        return code2;
+    }
+
+    public void setCode2(String code2) {
+        this.code2 = code2;
     }
 
 
-    // Getters y Setters
+    @Override
+    public String toString() {
+        return "Country{" +
+                "code='" + code + '\'' +
+                ", name='" + name + '\'' +
+                ", continent='" + continent + '\'' +
+                ", region='" + region + '\'' +
+                ", surfaceArea=" + surfaceArea +
+                ", indepYear=" + indepYear +
+                ", population=" + population +
+                ", lifeExpectancy=" + lifeExpectancy +
+                ", gnp=" + gnp +
+                ", gnpOld=" + gnpOld +
+                ", localName='" + localName + '\'' +
+                ", governmentForm='" + GovernmentForm + '\'' +
+                ", headOfState='" + headOfState + '\'' +
+                ", capital=" + capital +
+                ", code2='" + code2 + '\'' +
+                '}';
+    }
+// Getters y Setters
 }
 

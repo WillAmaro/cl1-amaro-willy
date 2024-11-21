@@ -9,7 +9,6 @@ public class city {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    private String name;
 
 
 
@@ -17,9 +16,10 @@ public class city {
     @ManyToOne
     @JoinColumn(name = "CountryCode")
     private country country;
-
+    private String name;
     private String district;
     private Integer population;
+
 
 
 

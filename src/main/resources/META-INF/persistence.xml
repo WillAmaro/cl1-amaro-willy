@@ -25,9 +25,9 @@
             <property name="hibernate.highlight_sql" value="true"/>
 
             <!-- Configuración de scripts -->
-            <property name="jakarta.persistence.schema-generation.database.action" value="drop-and-create" />
-            <property name="jakarta.persistence.schema-generation.database.drop-source" value="script" />
-            <property name="jakarta.persistence.schema-generation.database.create-source" value="script" />
+<!--            <property name="jakarta.persistence.schema-generation.database.action" value="drop-and-create" />-->
+<!--            <property name="jakarta.persistence.schema-generation.database.drop-source" value="script" />-->
+<!--            <property name="jakarta.persistence.schema-generation.database.create-source" value="script" />-->
 
         </properties>
 

@@ -12,9 +12,8 @@ public class countryLanguage {
     @ManyToOne
     @JoinColumn(name = "CountryCode")
     private country country;
-
-    private String language;
     private Boolean isOfficial;
+    private String language;
     private Float percentage;
 
     // Getters y Setters
